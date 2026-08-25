@@ -8,7 +8,7 @@ http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
 <bean id="nicewriter" class="writer.NiceWriter" />
 <bean id="writer" class="writer.Writer" />
 
-<bean id="test" class="test.Test">
+<bean id="WriterDemo" class="WriterDemo.WriterDemo">
 	<constructor-arg ref="nicewriter" />
 </bean>
 

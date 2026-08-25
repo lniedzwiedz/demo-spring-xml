@@ -2,17 +2,15 @@ package writer;
 
 public class NiceWriter implements IWriter {
 
-    IOzdobnik ozdobnik;
+    IDecorator decorator;
 
     public void writer(String s) {
         System.out.println("The string is: " + s);
-        System.out.print(" Thank you for your attention");
-        System.out.print(ozdobnik.ozdobnik("This is ") + s);
+        System.out.println(" Thank you for your attention");
+        System.out.println(decorator.decorator("Goodbye") + s);
     }
 
-    public void setOzdobnik(IOzdobnik ozdobnik) {
-        this.ozdobnik = ozdobnik;
+    public void setDecorator(IDecorator decorator) {
+        this.decorator = decorator;
     }
-
-
 }

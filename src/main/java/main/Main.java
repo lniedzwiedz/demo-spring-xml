@@ -3,21 +3,16 @@ package main;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import test.Test;
-
-
-
+import WriterDemo.WriterDemo;
 
 public class Main {
 
-	public static void main(String[] args) {
-		ApplicationContext context = new ClassPathXmlApplicationContext(
+    public static void main(String[] args) {
+        ApplicationContext context = new ClassPathXmlApplicationContext(
 //				"beans-constructor.xml");
-				"beans.xml");
-		BeanFactory factory = (BeanFactory) context;
-		Test test = (Test) factory.getBean("test");
-		test.run();
-	}
-
+                "beans.xml");
+        BeanFactory factory = (BeanFactory) context;
+        WriterDemo test = (WriterDemo) factory.getBean("WriterDemo");
+        test.run();
+    }
 }
